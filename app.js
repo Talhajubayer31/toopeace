@@ -6,7 +6,7 @@
 // ── Product Data ──
 const products = [
   { id: 1, name: 'নীলাঞ্জনা', price: 1399, image: 'images/product1.jpg', tag: 'New' },
-  { id: 2, name: 'স্নিগ্ধা', price: 1599, image: 'images/product2 .jpg', tag: 'Bestseller' },
+  { id: 2, name: 'স্নিগ্ধা', price: 1599, image: 'images/product2.jpg', tag: 'Bestseller' },
   { id: 3, name: 'মেহেক', price: 1499, image: 'images/product3.jpg', tag: '' },
   { id: 4, name: 'কাঠগোলাপ', price: 1699, image: 'images/product4.jpg', tag: 'New' },
   { id: 5, name: 'চারুলতা', price: 1399, image: 'images/product5.jpg', tag: 'Limited' },
