@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Too Peace — Wear Your Dream</title>
+  <meta name="description"
+    content="Too Peace is a premium women's clothing brand offering elegant, modern fashion pieces. Wear your dream with our curated collection.">
+  <link rel="icon" href="images/toopeacesymbol.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Hind+Siliguri:wght@400;500;600;700&family=Anek+Bangla:wght@400;500;600;700&family=Noto+Sans+Bengali&display=swap"
+    rel="stylesheet">
+  <script>
+    document.documentElement.classList.add('js-enabled');
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              pink: '#FF69B4',
+              gold: '#FFD700',
+              'pink-light': '#FFB6D9',
+              'gold-light': '#FFE44D',
+              gray: '#F7F7F7',
+              dark: '#2D2D2D',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-white font-sans text-brand-dark antialiased">
+
+  <!-- ═══════════════ INTRO LOADER ═══════════════ -->
+  <div id="intro-loader" class="fixed inset-0 z-[100] flex items-center justify-center bg-white">
+     <div class="relative flex flex-col items-center">
+       <div class="intro-logo-wrapper">
+         <img src="images/toopeacetext.png" alt="Too Peace Emblem" class="w-36 h-36 md:w-48 md:h-48 object-contain animate-intro-logo">
+       </div>
+       <div class="w-32 h-[2px] bg-brand-pink/20 mt-4 overflow-hidden relative intro-bar">
+         <div class="w-full h-full bg-brand-pink absolute top-0 left-0 -translate-x-full animate-intro-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ HEADER ═══════════════ -->
+  <header id="site-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 site-header">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+      <!-- Logo on the left -->
+      <a href="#home" class="logo-link">
+        <img src="images/toopeacesymbol.png" alt="Too Peace" class="site-logo-header h-12 md:h-14 lg:h-16 transition-transform duration-300 hover:scale-105" />
+      </a>
+      <!-- Center navigation menu -->
+      <nav id="desktop-nav" class="hidden md:flex space-x-8">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#shop" class="nav-link">Shop</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <!-- Cart icon on the right -->
+      <div class="relative">
+        <button id="cart-btn" class="flex items-center space-x-1">
+          <svg class="w-6 h-6 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9h12l-2-9M9 21h6" />
+          </svg>
+          <span id="cart-count"
+            class="absolute -top-2 -right-2 bg-gradient-to-r from-brand-pink to-brand-gold text-white text-xs w-5 h-5 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300">0</span>
+        </button>
+      </div>
+      <div id="mobile-menu" class="mobile-menu-closed">
+        <nav class="flex flex-col items-center justify-center h-full gap-8">
+          <a href="#home" class="mobile-nav-link">Home</a>
+          <a href="#shop" class="mobile-nav-link">Shop</a>
+          <a href="#about" class="mobile-nav-link">About</a>
+          <a href="#cart" class="mobile-nav-link">Cart</a>
+        </nav>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1.5" aria-label="Open menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-white via-brand-gray to-white"></div>
+    <div class="hero-glow"></div>
+    <!-- Floating Particles Background -->
+    <div class="hero-particles">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+      <div class="particle particle-5"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 w-full relative z-10 flex items-center min-h-[calc(100vh-80px)] pt-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center w-full">
+        <div
+          class="text-center lg:text-left pt-12 lg:pt-0 flex flex-col items-center lg:items-start w-full">
+          <!-- Large Premium Animated Logo in Left Column -->
+          <div class="logo-container animate-hero-logo">
+            <div class="logo-wrapper">
+              <img src="images/toopeacetext.png" onerror="this.onerror=null; this.src='images/toopeacelogo.png';"
+                alt="Too Peace Logo" class="logo-image" id="hero-logo">
+            </div>
+          </div>
+          <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+            <span class="block animate-hero-text-1">Wear your</span>
+            <span class="block gradient-text animate-hero-text-2">dream.</span>
+          </h1>
+          <p class="text-gray-500 text-lg md:text-xl max-w-md mx-auto lg:mx-0 mb-10 animate-hero-desc">
+            Discover timeless elegance with Too Peace — where every piece tells a story of grace and confidence.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full animate-hero-btns">
+            <a href="#shop" id="hero-shop-btn" class="btn-primary">Shop Now</a>
+            <a href="#about" id="hero-about-btn" class="btn-secondary">Our Story</a>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2 flex justify-center pt-24 lg:pt-0 animate-fade-up delay-2">
+          <div class="hero-image-wrapper">
+            <img src="images/product1.jpg" loading="lazy"
+              onerror="this.onerror=null; this.src='images/toopeacelogo.png';" alt="Too Peace — Elegant women's fashion"
+              class="w-full max-w-lg rounded-3xl shadow-2xl object-cover">
+            <div class="hero-image-accent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PRODUCT GRID ═══════════════ -->
+  <section id="shop" class="py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="text-center mb-16">
+        <h2 class="font-serif text-4xl md:text-5xl font-bold"> Our <span class="gradient-text">Collection</span></h2>
+      </div>
+      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Products injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section id="contact" class="py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <div>
+          <p class="text-brand-pink font-sans text-sm tracking-[0.3em] uppercase mb-4">Get in Touch</p>
+          <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">We'd love to <span class="gradient-text">hear from
+              you</span></h2>
+          <p class="text-gray-500 text-lg mb-8">Have a question about our collections or an order? Our team is here to
+            help you.</p>
+          <div class="space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-brand-gray flex items-center justify-center text-brand-pink">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold">Email Us</h4>
+                <p class="text-gray-400 text-sm">support@toopeace.com</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-brand-gray flex items-center justify-center text-brand-pink">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold">Visit Our Studio</h4>
+                <p class="text-gray-400 text-sm">123 Fashion Ave, Dhaka, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-brand-gray p-8 md:p-10 rounded-3xl">
+          <form id="contact-form" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium mb-2">Name</label>
+                <input type="text" required placeholder="Your name"
+                  class="w-full px-5 py-3 rounded-xl border-none focus:ring-2 focus:ring-brand-pink/20 outline-none">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Email</label>
+                <input type="email" required placeholder="Your email"
+                  class="w-full px-5 py-3 rounded-xl border-none focus:ring-2 focus:ring-brand-pink/20 outline-none">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Message</label>
+              <textarea rows="4" required placeholder="How can we help?"
+                class="w-full px-5 py-3 rounded-xl border-none focus:ring-2 focus:ring-brand-pink/20 outline-none resize-none"></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full">Send Message</button>
+          </form>
+          <p id="contact-success" class="text-green-500 text-sm mt-4 text-center hidden">Message sent! We'll get back to
+            you soon. ✨</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section id="about" class="py-24 bg-brand-gray">
+    <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center">
+      <p class="text-brand-pink font-sans text-sm tracking-[0.3em] uppercase mb-4">About Us</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold mb-8">Crafted with <span class="gradient-text">Love</span>
+      </h2>
+      <p class="text-gray-500 text-lg leading-relaxed max-w-2xl mx-auto">
+        Too Peace is more than a clothing brand — it's a movement. We believe every woman deserves to feel powerful and
+        beautiful. Our pieces are designed with intention, blending modern elegance with timeless sophistication. Each
+        stitch carries a promise: to help you wear your dream, every single day.
+      </p>
+      <div class="grid grid-cols-3 gap-8 mt-16">
+        <div class="stat-card">
+          <span class="text-3xl font-serif font-bold gradient-text">500+</span>
+          <span class="text-gray-400 text-sm mt-1">Happy Clients</span>
+        </div>
+        <div class="stat-card">
+          <span class="text-3xl font-serif font-bold gradient-text">50+</span>
+          <span class="text-gray-400 text-sm mt-1">Unique Designs</span>
+        </div>
+        <div class="stat-card">
+          <span class="text-3xl font-serif font-bold gradient-text">100%</span>
+          <span class="text-gray-400 text-sm mt-1">Quality Fabric</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ NEWSLETTER ═══════════════ -->
+  <section id="newsletter" class="py-24 bg-brand-gray relative overflow-hidden">
+    <div class="newsletter-glow"></div>
+    <div class="max-w-2xl mx-auto px-6 lg:px-10 text-center relative z-10">
+      <p class="text-brand-pink font-sans text-sm tracking-[0.3em] uppercase mb-4">Stay Connected</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">Join Our <span class="gradient-text">Family</span></h2>
+      <p class="text-gray-500 text-lg mb-10">Subscribe and be the first to know about new arrivals, exclusive offers,
+        and style inspiration.</p>
+      <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required
+          class="flex-1 px-6 py-4 rounded-full border border-gray-200 bg-white focus:outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 transition-all duration-300 text-sm">
+        <button type="submit" id="newsletter-submit" class="btn-primary whitespace-nowrap">Subscribe</button>
+      </form>
+      <p id="newsletter-success" class="text-green-500 text-sm mt-4 hidden">Thank you for subscribing! 💖</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CART DRAWER ═══════════════ -->
+  <div id="cart-overlay"
+    class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+  </div>
+  <aside id="cart-drawer"
+    class="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 translate-x-full transition-transform duration-500 ease-out flex flex-col">
+    <div class="flex items-center justify-between p-6 border-b border-gray-100">
+      <h3 class="font-serif text-2xl font-bold">Your Cart</h3>
+      <button id="cart-close"
+        class="w-10 h-10 rounded-full bg-brand-gray flex items-center justify-center hover:bg-gray-200 transition-colors"
+        aria-label="Close cart">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div id="cart-items" class="flex-1 overflow-y-auto p-6">
+      <p id="cart-empty" class="text-gray-400 text-center py-20">Your cart is empty</p>
+    </div>
+    <div id="cart-footer" class="p-6 border-t border-gray-100 hidden">
+      <div class="flex justify-between mb-4">
+        <span class="text-gray-500">Total</span>
+        <span id="cart-total" class="font-serif text-xl font-bold gradient-text">৳0</span>
+      </div>
+      <button id="checkout-btn" class="btn-primary w-full">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ═══════════════ CHECKOUT SECTION ═══════════════ -->
+  <section id="checkout-section" class="hidden py-32 min-h-screen bg-brand-gray relative z-40">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10">
+      <button id="back-to-shop-btn"
+        class="mb-8 text-gray-500 hover:text-brand-pink transition-colors flex items-center gap-2 font-medium">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Shop
+      </button>
+
+      <div class="text-center mb-12 animate-fade-up">
+        <h2 class="font-serif text-4xl md:text-5xl font-bold">Secure <span class="gradient-text">Checkout</span></h2>
+        <p class="text-gray-500 mt-4 text-lg">Please enter your details to complete your order.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-12">
+        <!-- Form -->
+        <div
+          class="lg:col-span-3 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100 animate-fade-up delay-1">
+          <form id="checkout-form" class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium mb-2 text-brand-dark">Full Name</label>
+              <input type="text" id="checkout-name" required placeholder="Enter your full name"
+                class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 outline-none transition-all">
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium mb-2 text-brand-dark">Phone Number</label>
+                <input type="tel" id="checkout-phone" required placeholder="+880 1..."
+                  class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 outline-none transition-all">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2 text-brand-dark">Email Address</label>
+                <input type="email" id="checkout-email" required placeholder="your@email.com"
+                  class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 outline-none transition-all">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2 text-brand-dark">Shipping Address</label>
+              <textarea id="checkout-address" rows="3" required placeholder="House, Street, Area, City"
+                class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 outline-none transition-all resize-none"></textarea>
+            </div>
+            <button type="submit" id="confirm-order-btn" class="btn-primary w-full mt-4 text-lg py-4">Confirm
+              Order</button>
+          </form>
+        </div>
+
+        <!-- Order Summary -->
+        <div
+          class="lg:col-span-2 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100 h-fit animate-fade-up delay-2">
+          <h3 class="font-serif text-2xl font-bold mb-6">Order Summary</h3>
+          <div id="checkout-items" class="space-y-4 mb-6 max-h-72 overflow-y-auto pr-2 custom-scrollbar">
+            <!-- Checkout items injected here -->
+          </div>
+          <div class="border-t border-gray-100 pt-6 space-y-4">
+            <div class="flex justify-between text-gray-500">
+              <span>Subtotal</span>
+              <span id="checkout-subtotal" class="font-medium text-brand-dark">৳0</span>
+            </div>
+            <div class="flex justify-between text-gray-500">
+              <span>Shipping (Flat Rate)</span>
+              <span class="font-medium text-brand-dark">৳100</span>
+            </div>
+            <div
+              class="flex justify-between font-serif text-2xl font-bold gradient-text pt-4 border-t border-gray-100 mt-4">
+              <span>Grand Total</span>
+              <span id="checkout-grand-total">৳0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SUCCESS MODAL ═══════════════ -->
+  <div id="success-modal"
+    class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+    <div
+      class="bg-white rounded-3xl p-10 max-w-md w-full text-center shadow-2xl transform scale-95 transition-transform duration-300"
+      id="success-modal-content">
+      <div class="w-20 h-20 bg-green-50 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h3 class="font-serif text-3xl font-bold mb-4 text-brand-dark">Thank You for Your Order!</h3>
+      <div class="bg-brand-gray p-6 rounded-2xl mb-8 border border-gray-100">
+        <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-3">Order ID</p>
+        <p id="success-order-id" class="font-serif text-4xl font-bold gradient-text mb-4">#TP-XXXX</p>
+        <p class="text-gray-500 text-lg">We will call you shortly to confirm.</p>
+      </div>
+      <button id="close-modal-btn" class="btn-primary w-full text-lg py-4">Continue Shopping</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer id="site-footer" class="bg-brand-dark text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid md:grid-cols-3 gap-12 items-start">
+        <div>
+          <div class="footer-logo-container reveal">
+            <img src="images/toopeacetext.png" onerror="this.onerror=null; this.src='images/toopeacelogo.png';"
+              loading="lazy" alt="Too Peace" class="site-logo-footer">
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mt-6">Wear your dream. Premium women's fashion crafted with
+            love and intention.</p>
+        </div>
+        <div class="text-center">
+          <h4 class="font-serif text-lg font-semibold mb-4">Quick Links</h4>
+          <div class="flex flex-col gap-2">
+            <a href="#home" class="text-gray-400 hover:text-brand-pink transition-colors text-sm">Home</a>
+            <a href="#shop" class="text-gray-400 hover:text-brand-pink transition-colors text-sm">Shop</a>
+            <a href="#about" class="text-gray-400 hover:text-brand-pink transition-colors text-sm">About</a>
+          </div>
+        </div>
+        <div class="md:text-right">
+          <h4 class="font-serif text-lg font-semibold mb-4">Connect With Us</h4>
+          <div class="flex gap-4 md:justify-end mb-4">
+            <a href="#" id="social-facebook" class="social-icon" aria-label="Facebook">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="#" id="social-instagram" class="social-icon" aria-label="Instagram">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+            </a>
+          </div>
+          <p class="text-gray-400 text-sm">contact@toopeace.com</p>
+          <p class="text-gray-400 text-sm">+880 1733 312490</p>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2026 Too Peace. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
